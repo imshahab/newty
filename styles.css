@@ -1,0 +1,144 @@
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 2fr 1fr;
+    grid-template-areas: "crypto ..... weather"
+                        "time time time"
+                        "author author author";
+}
+
+.author-text {
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    grid-area: author;
+    align-self: end;
+    justify-content: center;
+    width: 100%;
+    text-shadow: 0px 0px 8px #aaaaaa;
+}
+
+.cryptos-container {
+    display: flex;
+    margin: 1.5em 1em;
+    grid-area: crypto;
+    align-self: start;
+    justify-self: start;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    align-items: start;
+}
+
+.crypto-container {
+    display: flex;
+    gap: 0.5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#crypto-price {
+    text-shadow: 0px 0px 16px #aaaaaa;
+    margin: 0;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    grid-area: weather;
+    justify-content: center;
+    align-items: end;
+    align-self: start;
+    justify-self: end;
+    text-shadow: 0px 0px 12px #aaaaaa;
+}
+
+.icon-degree-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.weather-img {
+    width: 56px;
+}
+
+.degree-text,
+.city-text {
+    margin: 0;
+}
+
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    grid-area: time;
+    justify-self: center;
+    align-items: center;
+    text-shadow: 0px 0px 12px #aaaaaa;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.time-text{
+    font-size: 3.5rem;
+}
+
+.message-text,
+.daytime-text {
+    position: absolute;
+    top: 86px;
+    text-shadow: 0px 0px 16px #3b3b3b;
+    padding: 0 1em;
+    font-size: 1.5em;
+}
+
+
+.message-text,
+.daytime-text,
+.time-text  {
+    margin: 0;
+    transition: all 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    opacity: 0;
+}
